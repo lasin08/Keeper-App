@@ -25,7 +25,7 @@ header h1 {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   text-align: center;
   bottom: 0;
   width: 100%;
@@ -51,7 +51,7 @@ footer p {
 .note p {
   font-size: 1.1em;
   margin-bottom: 10px;
-  white-space: pre-wrap;
+  white-space: pre;
   word-wrap: break-word;
 }
 
@@ -99,4 +99,13 @@ form.create-note button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+}
+
+@media screen and (max-width: 800px) {
+  .note,
+  header,
+  footer,
+  form.create-note {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
 }
