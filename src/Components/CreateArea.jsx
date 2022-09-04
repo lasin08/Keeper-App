@@ -21,7 +21,11 @@ function CreateArea(props) {
 
   function handleClick(event) {
     event.preventDefault();
-    props.add(input);
+    if (input.title !== "" && input.content !== "") {
+      props.add(input);
+    } else {
+      alert("Please provide the title and description");
+    }
     setInput({
       title: "",
       content: "",
